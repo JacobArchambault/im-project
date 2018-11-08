@@ -1,0 +1,62 @@
+/* Element Selectors */
+body {
+    background: url(happyinfant.jpg);
+}
+h1 {
+    color: rgb(255, 0, 255);
+    font-style: italic;
+}
+
+h2 {
+    color: rgb(64, 64, 64);
+}
+
+
+p {
+    color: auto;
+    
+
+}
+
+/* Class Selectors */
+.title {
+    font-size: 3em;
+}
+
+/* ID Selectors */
+    /* for text elements*/
+    #title {
+        
+    }
+    
+    #main-header {
+    
+    }
+    
+    #about {
+    
+    }
+    
+    #classes {
+    
+    }    
+    
+    #calendar {
+    
+    }
+    
+    #contact {
+        
+    }
+    
+    /* ID selectors for pics*/
+    #background-image {
+        size: 1em;
+        
+    }
+
+    #foreground-image {
+        border-radius: 50%;
+    }
+/* Attribute Selectors */
+/* Pseudo-Attribute Selectors */
