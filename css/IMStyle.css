@@ -1,62 +1,103 @@
-/* Element Selectors */
+/* 1 Element Selectors */
 body {
-    background: url(happyinfant.jpg);
+    background-image: linear-gradient(to right, rgb(191, 191, 255), white, white, rgb(191, 191, 255));
 }
 h1 {
-    color: rgb(255, 0, 255);
+    color: rgb(255, 63, 255);
     font-style: italic;
+    font-family: "Italianno", cursive;
+    text-align: center;
+    font-size: 3rem;
 }
 
 h2 {
     color: rgb(64, 64, 64);
+    font-family: "Tangerine", cursive;
 }
-
 
 p {
-    color: auto;
-    
-
+    color: black;
+    text-align: justify;
+    font-family: "Cormorant Garamond", cursive;
 }
 
-/* Class Selectors */
-.title {
-    font-size: 3em;
+textarea {
+    min-width: 100%;
 }
 
-/* ID Selectors */
-    /* for text elements*/
-    #title {
-        
-    }
-    
-    #main-header {
-    
-    }
-    
-    #about {
-    
-    }
-    
-    #classes {
-    
-    }    
-    
-    #calendar {
-    
-    }
-    
-    #contact {
-        
-    }
-    
-    /* ID selectors for pics*/
-    #background-image {
-        size: 1em;
-        
+
+/* 2 Class Selectors */
+.flexbox {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: nowrap;
+}
+
+.column {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.bar {
+    width: 1.4rem;
+    height: .2rem;
+    background-color: rgb(255, 63, 255);
+    margin: .2rem 0;
+}
+
+/* 3 ID Selectors */
+    /* 3.1 for text elements*/
+    #main-body {
+        max-width: 32rem;
     }
 
+    #header-buttons {
+        text-align: right;
+        font-family: "Cormorant Garamond", cursive;
+    }
+
+    #buttons {
+        text-align: center;
+        font-family: "Tangerine", cursive;
+        font-size: 2.33rem;
+        color: rgb(255, 63, 255)
+    }
+    
+    #contact-form {
+        min-width: 100%;
+        font-family: "Cormorant Garamond", cursive;
+    }
+
+    #hamburger {
+        cursor: pointer;
+    }
+
+    /* 3.2 ID selectors for pics*/
     #foreground-image {
+        max-width: 100%;
         border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        filter: blur(.05em);
     }
+
 /* Attribute Selectors */
 /* Pseudo-Attribute Selectors */
+
+/* Media queries */
+@media (max-width: 501px) {
+    #header-buttons {
+        display: none;
+    }
+}
+
+@media (min-width: 502px) {
+    #hamburger {
+        display: none;
+    }
+}
+
+/* To do: 
+    add hamburger menu
+    add fade in/out for paragraphs on click. */
