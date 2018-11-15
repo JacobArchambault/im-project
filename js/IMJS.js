@@ -1,7 +1,7 @@
 // 1 Variables
     // 1.1 Defined Functions
     let appear = function (x) {
-    linksObjects[x].section.fadeIn();
+    linksObjects[x].section.fadeToggle();
     
     };
         
@@ -21,8 +21,6 @@ $(".text-section").hide();
 for (var i=0; i<linksObjects.length; i++) {
     let y = i;
     linksObjects[i].link.on("click",  function () {
-        $(".text-section").hide();
         appear(y);
     })
-    }  // with the Appear function defined above, this function makes text appear when the link to it is clicked on
-
+    }  // with the Appear function defined above, this function makes text appear/disappear when the link to it is clicked on
