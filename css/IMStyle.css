@@ -2,6 +2,7 @@
 body {
     background-image: linear-gradient(to right, rgb(191, 191, 255), white, white, rgb(191, 191, 255));
 }
+
 h1 {
     color: rgb(255, 63, 255);
     font-style: italic;
@@ -83,14 +84,36 @@ textarea {
     }
 
 /* Media queries */
+/* Small screens */
 @media (max-width: 501px) {
     #header-buttons {
         display: none;
     }
+
+
 }
 
+/* Larger screens */
 @media (min-width: 502px) {
     #hamburger {
-        display: none;
+        display: none; /* Hides hamburger menu. Hamburger isn't functional yet. This will be fixed in a later iteration of the site*/
+    }
+    /* The following commands turn the small screen, one-column layout for content paragraphs into a flexible multi-column layout */
+    .main-text {
+        display: flex;
+        flex-wrap: wrap;    
+        align-content: space-between;
+    }
+
+
+    #main-body {
+        max-width: 64rem;
+    }
+
+    .text-section {
+        padding: 1rem;
+        flex: 1;
+        min-width: 20rem;
+        max-width: 32rem;
     }
 }
