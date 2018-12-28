@@ -4,34 +4,49 @@ body {
 }
 
 h1 {
-    color: rgb(255, 63, 255);
     font-style: italic;
     font-family: "Italianno", cursive;
-    text-align: center;
     font-size: 3rem;
+    color: rgb(255, 63, 255);
+    text-align: center;
 }
 
 h2 {
-    color: rgb(64, 64, 64);
     font-family: "Tangerine", cursive;
+    color: rgb(64, 64, 64);
 }
 
 p {
+    font-family: "Cormorant Garamond", cursive;
     color: black;
     text-align: justify;
-    font-family: "Cormorant Garamond", cursive;
 }
 
 textarea {
     min-width: 100%;
 }
 
+main {
+    max-width: 32rem;
+}
 
+/* 1.1 Accessibility selectors */
+nav {
+    font-family: "Tangerine", cursive;
+    font-size: 2.33rem;
+    color: rgb(255, 63, 255);
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    font-size: 1rem;
+}
 /* 2 Class Selectors */
 .flexbox {
     display: flex;
-    align-content: stretch;
     flex-wrap: nowrap;
+    align-content: stretch;
 }
 
 .column {
@@ -39,65 +54,45 @@ textarea {
     flex-basis: 0;
 }
 
-.bar {
-    width: 1.4rem;
-    height: .2rem;
-    background-color: rgb(255, 63, 255);
-    margin: .2rem 0;
-}
 
 /* 3 ID Selectors */
     /* 3.1 for text elements*/
-    #main-body {
-        max-width: 32rem;
-    }
-
-    #header-buttons {
-        text-align: right;
-        font-family: "Cormorant Garamond", cursive;
-    }
-
-    #buttons {
-        text-align: center;
-        font-family: "Tangerine", cursive;
-        font-size: 2.33rem;
-        color: rgb(255, 63, 255)
-    }
     
-    #contact-form {
-        min-width: 100%;
+    #header-buttons {
         font-family: "Cormorant Garamond", cursive;
+        text-align: right;
     }
 
-    #hamburger {
-        cursor: pointer;
+    #contact-form {
+        font-family: "Cormorant Garamond", cursive;
+        min-width: 100%;
     }
+
 
     /* 3.2 ID selectors for pics*/
     #foreground-image {
+        display: block;
         max-width: 100%;
         border-radius: 50%;
-        display: block;
         margin-left: auto;
         margin-right: auto;
         filter: blur(.05em);
     }
 
 /* Media queries */
-/* Small screens */
-@media (max-width: 501px) {
-    #header-buttons {
-        display: none;
-    }
-
-
-}
-
 /* Larger screens */
 @media (min-width: 502px) {
-    #hamburger {
-        display: none; /* Hides hamburger menu. Hamburger isn't functional yet. This will be fixed in a later iteration of the site*/
+    main {
+        max-width: 64rem;
     }
+
+    section {
+        flex: 1;
+        padding: 1rem;
+        min-width: 20rem;
+        max-width: 32rem;
+    }
+    
     /* The following commands turn the small screen, one-column layout for content paragraphs into a flexible multi-column layout */
     .main-text {
         display: flex;
@@ -105,15 +100,4 @@ textarea {
         align-content: space-between;
     }
 
-
-    #main-body {
-        max-width: 64rem;
-    }
-
-    .text-section {
-        padding: 1rem;
-        flex: 1;
-        min-width: 20rem;
-        max-width: 32rem;
-    }
 }
